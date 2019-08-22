@@ -79,26 +79,3 @@ client.on('message', function (message) {
         }
     }
 })
-
-
-
-   
-    
-
-
-
-/*Ban*/
-client.on('message', function (message) {
-    if (!message.guild) return
-    let args = message.content.trim().split(/ +/g)
- 
-    if (args[0].toLocaleLowerCase() === prefix + 'ban') {
-       if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send("You do not have the permission to use the ban command al7mar ;(")
-       let member = message.mentions.members.first()
-       if (!member) return message.channel.send("Please Mention an user")
-       if (member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.owner.id) return message.channel.send("Vous ne pouvez pas bannir cet utilisateur :x:")
-       if (!member.bannable) return message.channel.send("I do not have the permission to ban this member")
-       message.guild.ban(member, {days: 7})
-       message.channel.send('**' + member.user.username + '** Hes been banned from the server, Bye :o')
-    }
-})
