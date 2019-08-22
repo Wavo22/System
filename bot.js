@@ -4,7 +4,7 @@ const client = new Discord.Client();
 var prefix = ('+');
 
 
-client.login('NjE0MDY5NDM3MjUwOTI4NjQw.XV6G8w.E2Cp99zUC565T2LsOTduaAdbQdA');
+client.login(process.env.BOT_TOKEN);
 
 client.on('guildMemberAdd', member =>{
     member.guild.channels.get('605438284151128065').send(' **Hello** ' + member.user + ' **,** **Welcome to Kingdom** **,** **We are now** ' + member.guild.memberCount + ' **Members** **!** :heart: ');
