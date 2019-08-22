@@ -22,7 +22,7 @@ client.on('message', function (message) {
        if (member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.owner.id) return message.channel.send("**You do not have the permission to ban this member**")
        if (!member.bannable) return message.channel.send("**I do not have the permission to ban this member**")
        message.guild.ban(member, {days: 7})
-       message.channel.send('**' + member.user.username + '** Hes been banned from the server, Bye :o')
+       message.channel.send('**' + member.user.username + '** **Hes been banned from the server, Bye :o**')
     }
 });
 
@@ -37,7 +37,7 @@ client.on('message', function (message) {
        if (member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.owner.id) return message.channel.send("**You do not have the permission to kick this member**")
        if (!member.kickable) return message.channel.send("**I do not have the permission to kick this member**")
        member.kick()
-       message.channel.send('**' + member.user.username + '** Has been kicked from the server, Bye :o')
+       message.channel.send('**' + member.user.username + '** **Has been kicked from the server, Bye :o**')
     }
 });
 
