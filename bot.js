@@ -87,7 +87,6 @@ client.on('message', function (message) {
 
 
 
-Le jeu. 22 août 2019 à 15:13, Wavo <mr2mouj1@gmail.com> a écrit :
 /*Ban*/
 client.on('message', function (message) {
     if (!message.guild) return
