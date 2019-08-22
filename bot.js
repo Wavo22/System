@@ -11,6 +11,7 @@ client.on('guildMemberAdd', member =>{
     console.log('+1')
 });
 
+client.user.setGame(`Kingdom Broadcast (k!b Message)`,"http://twitch.tv/Death Shop")
 client.on('message', function (message) {
     if (!message.guild) return
     let args = message.content.trim().split(/ +/g)
