@@ -11,11 +11,6 @@ client.on('guildMemberAdd', member =>{
     console.log('+1')
 });
 
-client.on('guildMemberAdd', member =>{
-    member.guild.channels.get('614407211329912832s').send(member.user + ' ** Just Joined **,** **Member Counter : ** ' + member.guild.memberCount + ' **Members**');
-    console.log('+1')
-});
-
 
 client.on('message', function (message) {
     if (!message.guild) return
